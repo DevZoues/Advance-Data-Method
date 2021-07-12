@@ -1,0 +1,45 @@
+{
+  "name": "Advance Data Method",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+  
+      "ServerGameFiles": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/ServerScriptService"
+      }
+    },
+
+      "StarterPlayer":{
+        "$className": "StarterPlayer",
+
+      "StarterCharacterScripts":{
+        "$className": "StarterCharacterScripts",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/client/StarterCharacterScripts"
+      },
+
+      "StarterPlayerScripts":{
+        "$className": "StarterPlayerScripts",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/client/StarterPlayerScripts"
+      }
+    },
+
+    "StarterGui":{
+      "$className": "StarterGui",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/StarterGui"
+    },
+
+    "Workspace":{
+      "$className": "Workspace",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/Workspace"
+    }
+
+  }
+} 
