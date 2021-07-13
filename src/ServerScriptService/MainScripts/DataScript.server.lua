@@ -5,6 +5,9 @@ local dataStore = DSS:GetDataStore("AdvanceData")
 --//Receiving Data Function//--
 local function getData(player)
 
+	local UserId = "Player_" .. player.UserId
+	local data
+
 	local leaderstats = Instance.new('Folder')
 	leaderstats.Name = "leaderstats"
 	leaderstats.Parent = player
@@ -13,12 +16,19 @@ local function getData(player)
 	money.Name = "Money"
 	money.Parent = leaderstats
 
-	local coins = Instance.new('IntValue')
-	coins.Name = "Coins"
-	coins.Parent = leaderstats
+	local gold = Instance.new('IntValue')
+	gold.Name = "Gold"
+	gold.Parent = leaderstats
 
-	local UserId = "Player_" .. player.UserId
-	local data
+	local diamond = Instance.new('IntValue')
+	diamond.Name = "Diamond"
+	diamond.Parent = leaderstats
+
+	local function setValue()
+		money.Value = data[1]
+		gold.Value = data[2]
+		diamond.Value = data[3]
+	end
 
 	local count = 0
 	local tries = 3
@@ -40,8 +50,7 @@ local function getData(player)
 	
 	if success then
 		if data ~= nil then
-			money.Value = data[1]
-			coins.Value = data[2]
+			setValue()
 		end
 	end		
 end
